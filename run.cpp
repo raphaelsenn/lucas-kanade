@@ -4,8 +4,7 @@
 #include <iostream>
 #include "./src/lucas_kanade.hpp"
 
-int WIDTH, HEIGHT;        // Video WIDTH and HEIGHT
-int LK_WINDOW_SIZE = 5;   // Size of the local-neighborhood for lucas-kanade
+int LK_WINDOW_SIZE = 5; // Size of the local neighborhood for lucas-kanade
 
 int main(int argc, char **argv)
 {
@@ -42,8 +41,8 @@ int main(int argc, char **argv)
     std::cout << "[ERROR] Could not grab initial frame.\n";
     return -1;
   }
-  WIDTH = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_WIDTH));
-  HEIGHT = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
+  int WIDTH = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_WIDTH));
+  int HEIGHT = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
   std::cout << "Start running a " << WIDTH << "x" << HEIGHT << " video stream.\n";
   while (true)
   {
@@ -54,7 +53,7 @@ int main(int argc, char **argv)
       break;
     }
     // Calculating optical flow based on lucas-kanade 
-    cv::Mat flow = lucasKanadeOpticalFlow(I1, I2, LK_WINDOW_SIZE, WIDTH, HEIGHT);
+    cv::Mat flow = lucasKanadeOpticalFlow(I1, I2, LK_WINDOW_SIZE);
     cv::imshow("Lucas-Kanade method for Optical Flow", flow);
     
     I1 = I2.clone();

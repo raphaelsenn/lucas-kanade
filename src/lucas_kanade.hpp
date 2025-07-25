@@ -14,12 +14,10 @@ struct Gradients
 };
 
 // Calculates the gradients (Ix, Iy for I1 and It) for two images I1 and I2
-Gradients calculateImageGradients(const cv::Mat& I1,      // First image (frame t)
-                                  const cv::Mat& I2);     // Second image (frame t+1)
+Gradients calculateImageGradients(const cv::Mat& I1,    // First image (frame t)
+                                  const cv::Mat& I2);   // Second image (frame t+1)
 
 // Uses lucas-kanade method to calculate optical flow between two images I1 and I2
-cv::Mat lucasKanadeOpticalFlow(const cv::Mat& I1,         // First image (frame t)
-                               const cv::Mat& I2,         // Second image (frame t+1)
-                               const int& kernelSizeLK,   // Size of local-neighborhood kernel
-                               const int& windowWidth,    // Screen WIDTH
-                               const int& windowHeight);  // Screen HEIGHT
+cv::Mat lucasKanadeOpticalFlow(const cv::Mat& I1,       // First image (frame t)
+                               const cv::Mat& I2,       // Second image (frame t+1)
+                               int kernelSizeLK);       // Size of local-neighborhood kernel

@@ -1,6 +1,10 @@
 # lucas-kanade
 Simple C++ implementation of Lucas-Kanade optical flow using OpenCV. 
 
+**Note:**  
+This implementation is written with a focus on clarity and mathematical transparency rather than low-level optimizations.  
+But it should run in real-time on any CPU > the year 2010.
+
 The original paper can be found here: [An Iterative Image Registration Technique with an Application to Stereo Vision](https://cseweb.ucsd.edu/classes/sp02/cse252/lucaskanade81.pdf)
 
 ![lucas_kanade_gif](./assets/optical_flow_lk.gif)
