@@ -48,3 +48,4 @@ run
 CMakeCache.txt
 *.mp4
 .vscode
+CMakeFiles
