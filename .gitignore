@@ -39,3 +39,12 @@
 
 # debug information files
 *.dwo
+
+# Ignore these files
+*.DS_Store
+Makefile
+cmake_install.cmake
+run
+CMakeCache.txt
+*.mp4
+.vscode

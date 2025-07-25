@@ -1,0 +1,3 @@
+/Users/raphael/fun/lucas-kanade/CMakeFiles/run.dir
+/Users/raphael/fun/lucas-kanade/CMakeFiles/edit_cache.dir
+/Users/raphael/fun/lucas-kanade/CMakeFiles/rebuild_cache.dir
