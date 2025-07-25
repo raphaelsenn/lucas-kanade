@@ -12,7 +12,7 @@ int GAUSSIAN_BLUR_SIZE = 3;
 float GAUSSIAN_BLUR_STD = 0.0f;
 
 // Settings to draw optical flow
-float FLOW_ARROW_SCALE = 4.0f;
+float FLOW_ARROW_SCALE = 5.0f;
 cv::Scalar ARROW_COLOR(0, 255, 0);
 int LINE_THICKNESS = 1;
 int LINE_SHIFT = 0;
@@ -36,7 +36,7 @@ Gradients calculateImageGradients(const cv::Mat& I1, const cv::Mat& I2)
   
   // Calculate final gradients
   cv::Sobel(g.I1_smooth, g.Ix, CV_32F, 1, 0);
-  cv::Sobel(g.I2_smooth, g.Iy, CV_32F, 0, 1);
+  cv::Sobel(g.I1_smooth, g.Iy, CV_32F, 0, 1);
   g.It = I2_gray - I1_gray;
   return g;
 }
